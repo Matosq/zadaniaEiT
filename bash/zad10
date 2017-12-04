@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function fun(){
+
+	for katalog in $(ls)
+	do
+		if [[ -d "$katalog" ]]
+		then
+			echo "Katalog: $katalog"
+			cd $katalog
+			fun
+		fi
+	
+		echo "$katalog"
+	done
+	cd ..
+}
+
+
+fun
+
+
+
+

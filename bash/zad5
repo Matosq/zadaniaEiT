@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+haslo="bash"
+
+echo "Wprowasz haslo. Masz 3 proby"
+
+for i in {2,1,0}
+do
+	read proba
+	if [[ $proba == $haslo ]]
+	then
+		echo "Haslo prawidlowe."
+		echo `ls ..`
+		break
+	else
+		echo "Bledne haslo. Zostalo Ci $i prob"
+	fi
+done
+ 
+

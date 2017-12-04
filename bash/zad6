@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Podaj swoje imie, nazwisko i rok urodzenia"
+read imie nazwisko rok
+echo "imie: $imie"
+echo "nazwisko: $nazwisko"
+echo "rok: $rok"
+

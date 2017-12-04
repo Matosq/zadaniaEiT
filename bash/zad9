@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Skrypt wyswietla ilosc wystapien slowa AGH w pliu file.log"
+
+echo `grep -ci 'agh' file.log`
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Wprowadz dowolna liczbe, jesli bedzie wieksza od 20, zostana pokazane dane o typie procesora"
+read wartosc
+
+if [[ $wartosc > 20 ]]
+then
+	echo `uname --processor`
+else
+	echo "Koniec programu"
+fi
+
+

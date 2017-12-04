@@ -1,0 +1,52 @@
+#!/bin/bash
+
+echo "---PROSTY KALKULATOR---"
+
+function dzialanie()
+{
+	echo "Jakie dzialanie chcesz wykonac?"
+	echo "1. dodawanie (+)"
+	echo "2. odejmowanie (-)"
+	echo "3. mnozenie (*)"
+	echo "4. dzielenie (/)"
+	echo "0. ZAKONCZ"
+
+	read operacja
+}
+
+function dane()
+{
+	echo "Wprowadz pierwsza liczbe"
+	read a
+	echo "Wprowadz druga liczbe"
+	read b
+}
+
+
+
+
+while true
+do
+	dzialanie
+	dane
+	case "$operacja" in
+		"1") wynik=$((a+b)) ;;
+		"2") wynik=$((a-b)) ;;
+		"3") wynik=$((a*b)) ;;
+		"4") if [[ $b == 0 ]]
+			then
+				echo "Blad dzielenia przez zero."
+				continue
+			fi
+			wynik=$((a/b)) ;;
+		"0") echo "Koniec programu"
+			break ;;
+		"*") echo "Bledna wartosc, wprowadz jeszcze raz."
+			continue
+	esac
+	
+	echo `clear`
+	echo "Wynik: $wynik"	
+		
+done
+

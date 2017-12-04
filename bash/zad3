@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "$0:: Imie to: $imie natomiast liczba wynosi: $liczba"
+
+liczba=50
+imie="Mateusz"
+
+export liczba
+export imie
+
+echo "$0:: Imie to: $imie natomiast liczba wynosi: $liczba"
+
+
+
+

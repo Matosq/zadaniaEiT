@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Wprowadz haslo do zamka po czym wcisnij enter:"
+read -s haslo
+echo "Haslo zostalo ustawione. Wpisz haslo aby rozszyfrowac zamek:"
+
+while true
+do
+	read proba
+	if [[ $proba == $haslo ]]
+		then
+		echo Udalo sie rozszyfrowac. Koniec programu
+		break
+	else
+		echo Nie udalo sie, sprobuj ponownie
+	fi
+
+done
+
